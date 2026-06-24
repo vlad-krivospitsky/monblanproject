@@ -136,8 +136,8 @@ const datepickerOptions = {
   disableMobile: true,
   monthSelectorType: "static",
   position: "below left",
-  prevArrow: "‹",
-  nextArrow: "›",
+  prevArrow: "‹‹",
+  nextArrow: "››",
 };
 
 flatpickr("#date-from", datepickerOptions);
