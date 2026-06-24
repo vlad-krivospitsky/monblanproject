@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Monblanproject profile statistics" />
+    <title>Monblanproject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="flatpickr/flatpickr.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="decor-layer" aria-hidden="true">
+      <img class="decor decor--top" src="assets/decor-top.svg" alt="" />
+      <img class="decor decor--bottom" src="assets/decor-bottom.svg" alt="" />
+    </div>
+
+    <header class="profile-header">
+      <div class="profile">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/logo.svg" alt="" />
+        </div>
+
+        <div class="profile-copy">
+          <div class="profile-title-row">
+            <h1>monblanproject</h1>
+            <span class="start-date">Start on&nbsp; 17-02-2016</span>
+          </div>
+
+          <div class="profile-stats" aria-label="Profile statistics">
+            <span><strong>870</strong> posts</span>
+            <span><strong>11,787</strong> followers</span>
+            <span><strong>112</strong> following</span>
+          </div>
+
+          <div class="date-filter">
+            <span class="date-label">Date</span>
+
+            <div class="date-field" id="date-from">
+              <input
+                class="date-input"
+                type="text"
+                placeholder="from"
+                aria-label="Start date"
+                autocomplete="off"
+                data-input
+              />
+              <span class="date-field__actions">
+                <button class="date-action date-action--plus" type="button" data-clear aria-label="Clear start date"></button>
+                <button
+                  class="date-action date-action--calendar"
+                  type="button"
+                  data-toggle
+                  aria-label="Open start date calendar"
+                >
+                  <img src="assets/calendar.png" alt="" aria-hidden="true" />
+                </button>
+              </span>
+            </div>
+
+            <div class="date-field" id="date-to">
+              <input
+                class="date-input"
+                type="text"
+                placeholder="to"
+                aria-label="End date"
+                autocomplete="off"
+                data-input
+              />
+              <span class="date-field__actions">
+                <button class="date-action date-action--plus" type="button" data-clear aria-label="Clear end date"></button>
+                <button
+                  class="date-action date-action--calendar"
+                  type="button"
+                  data-toggle
+                  aria-label="Open end date calendar"
+                >
+                  <img src="assets/calendar.png" alt="" aria-hidden="true" />
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="view-switcher" aria-label="Choose layout">
+        <button
+          class="view-button"
+          type="button"
+          data-view-button="tiles"
+          aria-label="Tile view"
+          aria-pressed="false"
+        >
+          <img class="grid-icon" src="assets/grid-inactive.svg" alt="" aria-hidden="true" />
+        </button>
+        <button
+          class="view-button is-current"
+          type="button"
+          data-view-button="rows"
+          aria-label="Row view"
+          aria-pressed="true"
+        >
+          <img class="list-icon" src="assets/list.svg" alt="" aria-hidden="true" />
+        </button>
+      </div>
+
+      <section class="posts posts--rows is-visible" data-view="rows" aria-label="Posts in rows"></section>
+      <section class="posts posts--tiles" data-view="tiles" aria-label="Posts in tiles"></section>
+
+      <button class="load-more" type="button">Load more</button>
+    </main>
+
+    <script src="flatpickr/flatpickr.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
